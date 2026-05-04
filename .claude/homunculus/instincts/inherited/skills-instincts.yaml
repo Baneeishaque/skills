@@ -1,0 +1,503 @@
+# Instincts generated from https://github.com/Baneeishaque/skills
+# Generated: 2026-05-04T10:51:08.453Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: skills-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Commit Length
+
+## Action
+
+Write moderate-length commit messages (~58 characters)
+
+## Evidence
+
+- Average commit message length: 58 chars
+- Based on 12 commits
+
+---
+id: skills-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: skills-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: skills-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: skills-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: skills-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~18x per month
+- Files: **/api/**
+
+---
+id: skills-workflow-add-new-product-or-feature-reference
+trigger: "when doing add new product or feature reference"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Workflow Add New Product Or Feature Reference
+
+## Action
+
+Follow the add-new-product-or-feature-reference workflow:
+1. Create a new directory under skills/cloudflare/references/{product}/
+2. Add or update the following files: README.md, api.md, configuration.md, patterns.md, gotchas.md (sometimes not all, but at least 3-5 of these)
+3. Update skills/cloudflare/SKILL.md to reference the new product/feature
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/cloudflare/SKILL.md, skills/cloudflare/references/*/README.md, skills/cloudflare/references/*/api.md
+
+---
+id: skills-workflow-systematic-factual-audit-and-correction
+trigger: "when doing systematic factual audit and correction"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Workflow Systematic Factual Audit And Correction
+
+## Action
+
+Follow the systematic-factual-audit-and-correction workflow:
+1. Review multiple documentation files for factual errors (limits, pricing, API names, etc.)
+2. Correct errors and cite sources where appropriate
+3. Update all affected files in a single commit
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/*/SKILL.md, skills/*/references/*.md, skills/cloudflare/references/**/*.md
+
+---
+id: skills-workflow-consolidate-and-revamp-skill-documentation
+trigger: "when doing consolidate and revamp skill documentation"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Workflow Consolidate And Revamp Skill Documentation
+
+## Action
+
+Follow the consolidate-and-revamp-skill-documentation workflow:
+1. Create or expand a consolidated skill directory (e.g., skills/agents-sdk/)
+2. Add new or updated SKILL.md and multiple reference files
+3. Update related command documentation to reference the new skill
+4. Remove or deprecate legacy skill files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/{new-skill}/SKILL.md, skills/{new-skill}/references/*.md, commands/*.md
+
+---
+id: skills-workflow-update-import-paths-or-apis-in-references
+trigger: "when doing update import paths or apis in references"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Baneeishaque/skills
+---
+
+# Skills Workflow Update Import Paths Or Apis In References
+
+## Action
+
+Follow the update-import-paths-or-apis-in-references workflow:
+1. Identify inconsistent import paths or API usage in reference files
+2. Update all affected files to use the standardized path or API
+3. Reference official documentation for correctness
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: skills/*/SKILL.md, skills/cloudflare/references/agents-sdk/*.md
+
+---
+id: skills-camelcase-files
+trigger: "When creating or renaming a file in the repository"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Camelcase Files
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Observed in skills/building-ai-agent-on-cloudflare/references/examples.md
+
+---
+id: skills-camelcase-functions
+trigger: "When defining a function in TypeScript"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Camelcase Functions
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: skills-pascalcase-classes
+trigger: "When defining a class in TypeScript"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Pascalcase Classes
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: skills-screaming-constants
+trigger: "When defining a constant in TypeScript"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Screaming Constants
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE convention
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: skills-relative-imports
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Relative Imports
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+- Seen in fix: standardize AIChatAgent and useAgentChat import paths (#38)
+
+---
+id: skills-named-exports
+trigger: "When exporting modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Named Exports
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: skills-separate-tests
+trigger: "When adding tests for a feature"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Separate Tests
+
+## Action
+
+Place test files in a separate location from source files
+
+## Evidence
+
+- Pattern in architecture.testLocation
+- Seen in feature-development workflow
+
+---
+id: skills-feature-test-doc-sequence
+trigger: "When implementing a new feature"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Feature Test Doc Sequence
+
+## Action
+
+First add the feature, then add tests, then update documentation
+
+## Evidence
+
+- Commit sequence in feature-development workflow
+- Examples in Fix factual errors in Workers limits, D1 pricing, Agent wrangler config, and troubleshooting (#34)
+
+---
+id: skills-git-conventional-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Git Conventional Prefix
+
+## Action
+
+Start the commit message with a conventional prefix (e.g., fix:, ci:, [workflows]:)
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Seen in fix: standardize AIChatAgent and useAgentChat import paths (#38)
+
+---
+id: skills-git-atomic-commits
+trigger: "When committing changes"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Git Atomic Commits
+
+## Action
+
+Group related changes into a single atomic commit, especially for systematic updates
+
+## Evidence
+
+- Pattern in systematic-factual-audit-and-correction workflow
+- Seen in Fix 18 factual errors: pricing, CPU limits, API names, sandbox docs, CLI syntax (#35)
+
+---
+id: skills-add-feature-reference
+trigger: "When someone wants to add documentation for a new Cloudflare product or feature"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Add Feature Reference
+
+## Action
+
+Create a new directory under skills/cloudflare/references/{product}/, add or update at least 3-5 reference files, and update skills/cloudflare/SKILL.md to reference the new product/feature
+
+## Evidence
+
+- add-new-product-or-feature-reference workflow
+- Pattern in commit sequence and files involved
+
+---
+id: skills-systematic-factual-audit
+trigger: "When someone wants to ensure documentation is accurate and up-to-date"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Systematic Factual Audit
+
+## Action
+
+Review multiple documentation files for factual errors, correct errors, cite sources, and update all affected files in a single commit
+
+## Evidence
+
+- systematic-factual-audit-and-correction workflow
+- Seen in Fix factual errors in Workers limits, D1 pricing, Agent wrangler config, and troubleshooting (#34)
+
+---
+id: skills-consolidate-skill-docs
+trigger: "When centralizing documentation for a product or SDK"
+confidence: 0.87
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Consolidate Skill Docs
+
+## Action
+
+Create or expand a consolidated skill directory, add new/updated SKILL.md and references, update related command docs, and remove or deprecate legacy skill files
+
+## Evidence
+
+- consolidate-and-revamp-skill-documentation workflow
+- Pattern in commit sequence and files involved
+
+---
+id: skills-update-import-paths
+trigger: "When inconsistencies in import paths or API usage are detected in documentation"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Baneeishaque/skills
+---
+
+# Skills Update Import Paths
+
+## Action
+
+Update all affected files to use standardized import paths or APIs, referencing official documentation for correctness
+
+## Evidence
+
+- update-import-paths-or-apis-in-references workflow
+- Seen in fix: standardize AIChatAgent and useAgentChat import paths (#38)
+
